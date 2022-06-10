@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : 'your-app-id',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v14.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <header></header>
+    <main>
+        <div class="openchat" onclick="openchat()">
+            <p>ჩატის დაწყება</p>
+        </div>
+        <div class="chatcontainer" id="chatcontainer">
+            <div class="chatheader">
+                <p>მომწერეთ</p>
+                <p class="chakece"><i class="fa-solid fa-chevron-down fa-bounce fa-beat-fade" onclick="closechat()"></i></p>
+            </div>
+            <div class="chatcontent">
+                <p>
+                    მოგვწერეთ თქვენი შეტყობინება და ჩვენ აუცილებლად გიპასუხებთ
+                </p>
+                <input type="text" name="fname" id="fname" placeholder="სახელი და გვარი">
+                <input type="email" name="email" id="email" placeholder="იმელი">
+                <textarea name="message" id="message" rows="10" placeholder="დაწერეთ თქვენი შეტყობინება"></textarea>
+                <div class="send"><p><i class="fa-solid fa-circle-right fa-flip"></i></p></div>
+            </div>
+        </div>
+
+        <div class="messenger">
+            <a href=""></a>
+        </div>
+        <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "PAGE-ID");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'API-VERSION'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script><p id="demo"></p>
+    </main>
+    <footer></footer>
+    
+
+    <script src="https://kit.fontawesome.com/2a4e11f771.js" crossorigin="anonymous"></script>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "PAGE-ID");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'API-VERSION'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+    <script src="js/javascript.js"></script>
+    
+</body>
+</html>
